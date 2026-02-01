@@ -1,0 +1,6 @@
+from synthworld import SynthWorldApp
+app = SynthWorldApp()
+app.spawn_robot('wheeled', (0, 0, 1))
+app.generate_initial_world()
+app.run()
+

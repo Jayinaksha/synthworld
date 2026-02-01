@@ -1,0 +1,31 @@
+# SynthWorld Simulator Dependencies
+# Core Engine
+pybullet>=3.2.5           # Physics simulation
+panda3d>=1.10.13          # 3D rendering engine
+
+# Math and Arrays
+numpy>=1.24.0             # Numerical computing
+scipy>=1.10.0             # Scientific computing (for noise, interpolation)
+
+# Image Processing
+opencv-python>=4.8.0      # Image processing for synthetic data
+Pillow>=10.0.0            # Image handling
+
+# AI and Behavior
+py-trees>=2.2.0           # Behavior trees for NPCs
+
+# Audio
+pygame>=2.5.0             # Audio playback
+
+# Data Export
+PyYAML>=6.0               # Configuration files
+h5py>=3.9.0               # HDF5 for large datasets
+
+# Noise Generation
+noise>=1.2.2              # Perlin noise for terrain
+
+# Optional LLM Integration (uncomment when needed)
+# google-generativeai>=0.3.0
+
+# Development
+pytest>=7.4.0             # Testing

@@ -1,0 +1,90 @@
+# SynthWorld Simulator Configuration
+
+# Window and Display
+display:
+  width: 1280
+  height: 720
+  fullscreen: false
+  vsync: true
+  target_fps: 60
+  title: "SynthWorld Simulator"
+
+# Physics Settings
+physics:
+  gravity: [0, 0, -9.81]
+  timestep: 0.004166667  # 240Hz internal physics
+  solver_iterations: 50
+  use_real_time: false
+
+# World Generation
+world:
+  seed: 42
+  chunk_size: 64
+  render_distance: 3  # chunks
+  terrain:
+    scale: 0.02
+    height_multiplier: 20
+    octaves: 4
+  buildings:
+    density: 0.3
+    min_height: 10
+    max_height: 50
+    min_size: 8
+    max_size: 24
+
+# Robot Defaults
+robots:
+  spawn_position: [0, 0, 1]
+  default_type: "wheeled"
+  
+# Sensors
+sensors:
+  camera:
+    width: 640
+    height: 480
+    fov: 60
+    near: 0.1
+    far: 100
+  lidar:
+    range: 30
+    horizontal_resolution: 1.0  # degrees
+    vertical_fov: 30
+    vertical_resolution: 2.0    # degrees
+  imu:
+    noise_accel: 0.01
+    noise_gyro: 0.001
+
+# NPCs
+npcs:
+  max_count: 20
+  spawn_radius: 50
+  behavior_update_rate: 10  # Hz
+
+# Missions
+missions:
+  auto_start_tutorial: true
+  
+# Data Export
+data_export:
+  enabled: true
+  output_directory: "./synthetic_data"
+  capture_interval: 5  # frames
+  formats:
+    - rgb
+    - depth
+    - segmentation
+    - annotations
+
+# Audio
+audio:
+  master_volume: 0.8
+  music_volume: 0.5
+  sfx_volume: 0.7
+  spatial_audio: true
+
+# Debug
+debug:
+  show_physics: false
+  show_fps: true
+  show_coordinates: true
+  verbose_logging: false

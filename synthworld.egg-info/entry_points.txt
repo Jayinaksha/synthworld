@@ -1,0 +1,2 @@
+[console_scripts]
+synthworld = synthworld.__main__:main
